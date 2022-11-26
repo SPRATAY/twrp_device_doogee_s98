@@ -1,4 +1,5 @@
-
+import /init.recovery.microtrust.rc
+import /init.recovery.services.rc
 on post-fs
     # Support A/B feature for EMMC and UFS boot region
     wait /dev/block/mmcblk0boot0 2
