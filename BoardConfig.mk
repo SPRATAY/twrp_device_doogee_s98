@@ -56,7 +56,7 @@ BOARD_KERNEL_IMAGE_NAME := Image.gz
 ifeq ($(TARGET_PREBUILT_KERNEL),)
   TARGET_KERNEL_CONFIG := S98Pro_user_defconfig
   TARGET_KERNEL_SOURCE := kernel/doogee/S98Pro
-  #TARGET_KERNEL_CLANG_COMPILE := true
+  TARGET_KERNEL_CLANG_COMPILE := true
 endif
 
 #BOARD_KERNEL_SEPARATED_DTBO := true
@@ -123,13 +123,13 @@ BOARD_USES_RECOVERY_AS_BOOT := true
 TARGET_NO_RECOVERY := true
 
 # Root
-BOARD_ROOT_EXTRA_FOLDERS += cust
+#BOARD_ROOT_EXTRA_FOLDERS += cust
 
 # System as root
 BOARD_BUILD_SYSTEM_ROOT_IMAGE := false
 
 # Treble
-BOARD_VNDK_VERSION := current
+,BOARD_VNDK_VERSION := current
 
 # TWRP specific build flags
 TW_DEVICE_VERSION := alpha
