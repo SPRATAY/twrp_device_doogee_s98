@@ -1,12 +1,14 @@
 # Logical partitions
-/system_root            ext4     /dev/block/bootdevice/by-name/system                   flags=display="System";logical;slotselect;first_stage_mount
+/system_root            ext4     /dev/block/bootdevice/by-name/system                   flags=display="System";logical;slotselect;mounttodecrypt
 /product                ext4     /dev/block/bootdevice/by-name/product                  flags=display="Product";logical;slotselect
-/vendor                 ext4     /dev/block/bootdevice/by-name/vendor                   flags=display="Vendor";logical;slotselect;first_stage_mount
+/vendor                 ext4     /dev/block/bootdevice/by-name/vendor                   flags=display="Vendor";logical;slotselect;mounttodecrypt
+/system_ext            ext4     /dev/block/bootdevice/by-name/system_ext                   flags=display="System Ext";logical;slotselect;mounttodecrypt
 
 # Image
 /vendor_image           emmc     /dev/block/bootdevice/by-name/vendor                   flags=display="Vendor Image";backup=1;flashimg=1
 /product_image          emmc     /dev/block/bootdevice/by-name/product                  flags=display="Product Image";backup=1;flashimg=1
 /system_image           emmc     /dev/block/bootdevice/by-name/system                   flags=display="System Image";backup=1;flashimg=1
+/system_ext_image           emmc     /dev/block/bootdevice/by-name/system_ext                   flags=display="System Ext Image";backup=1;flashimg=1
 
 # Core Partitions
 /md_udc                 emmc    /dev/block/platform/bootdevice/by-name/md_udc           flags=backup=1

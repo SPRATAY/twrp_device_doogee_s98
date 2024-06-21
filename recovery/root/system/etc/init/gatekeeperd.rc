@@ -1,0 +1,8 @@
+on late-init
+    start gatekeeperd
+
+service gatekeeperd /system/bin/gatekeeperd /tmp/misc/gatekeeper
+    class late_start
+    user root
+    writepid /dev/cpuset/system-background/tasks
+    seclabel u:r:recovery:s0
