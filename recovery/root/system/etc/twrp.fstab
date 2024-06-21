@@ -1,7 +1,7 @@
 # Logical partitions
-/system_root            ext4     /dev/block/bootdevice/by-name/system                   flags=display="System";logical;slotselect
+/system_root            ext4     /dev/block/bootdevice/by-name/system                   flags=display="System";logical;slotselect;first_stage_mount
 /product                ext4     /dev/block/bootdevice/by-name/product                  flags=display="Product";logical;slotselect
-/vendor                 ext4     /dev/block/bootdevice/by-name/vendor                   flags=display="Vendor";logical;slotselect
+/vendor                 ext4     /dev/block/bootdevice/by-name/vendor                   flags=display="Vendor";logical;slotselect;first_stage_mount
 
 # Image
 /vendor_image           emmc     /dev/block/bootdevice/by-name/vendor                   flags=display="Vendor Image";backup=1;flashimg=1
@@ -84,3 +84,5 @@
 /sec1                   emmc    /dev/block/platform/bootdevice/by-name/sec1             flags=display="Sec1";backup=1
 
 # md1dsp
+
+
