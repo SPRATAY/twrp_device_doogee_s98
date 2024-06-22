@@ -112,25 +112,28 @@ on property:hwservicemanager.ready=true
     start vendor.gatekeeper-1-0
 
 on property:ro.crypto.state=unsupported
-    stop mobicore
-    stop teei_daemon
-    stop vendor.keymaster-4-1-beanpod
-    stop vendor.gatekeeper-1-0
-    stop servicemanager
+    #stop
+    start mobicore
+    start teei_daemon
+    start vendor.keymaster-4-1-beanpod
+    start vendor.gatekeeper-1-0
+    start servicemanager
     stop hwservicemanager
 
 on property:ro.crypto.state=unencrypted
-    stop mobicore
-    stop teei_daemon
-    stop vendor.keymaster-4-1-beanpod
-    stop vendor.gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
+    #stop
+    start mobicore
+    start teei_daemon
+    start vendor.keymaster-4-1-beanpod
+    start vendor.gatekeeper-1-0
+    start servicemanager
+    start hwservicemanager
 
 on property:twrp.decrypt.done=true && property:twrp.all.users.decrypted=true
-    stop mobicore
-    stop teei_daemon
-    stop vendor.keymaster-4-1-beanpod
-    stop vendor.gatekeeper-1-0
-    stop servicemanager
-    stop hwservicemanager
+    #stop
+    start mobicore
+    start teei_daemon
+    start vendor.keymaster-4-1-beanpod
+    start vendor.gatekeeper-1-0
+    start servicemanager
+    start hwservicemanager
